@@ -1,20 +1,5 @@
 # AlquilApp
 
-AlquilApp is a full-stack application built with TypeScript, React for the frontend, and Node.js with Express for the backend. This project aims to provide a robust platform for managing rental applications.
-
-## Project Structure
-
-The project is organized into two main directories: `frontend` and `backend`.
-
-### Frontend
-
-The frontend is built using React and TypeScript. It includes:
-
-- **src/**: Contains the source code for the React application.
-  - **index.tsx**: Entry point of the React application.
-  - **App.tsx**: Main application component.
-  - **components/**: Reusable components.# AlquilApp
-
 AlquilApp es una aplicación full-stack construida con TypeScript, React para el frontend y Node.js con Express para el backend. Este proyecto tiene como objetivo proporcionar una plataforma robusta para la gestión de solicitudes de alquiler.
 
 ## Estructura del Proyecto
