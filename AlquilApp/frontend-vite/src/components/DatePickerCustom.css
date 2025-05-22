@@ -1,0 +1,38 @@
+/* src/DatePickerCustom.css */
+
+/*
+  Este estilo apunta al contenedor principal de tu CustomDatePickerInput.
+  Ahora es el contenedor quien maneja el posicionamiento relativo para el icono.
+*/
+.custom-datepicker-container {
+  width: 100%; /* Asegura que el contenedor ocupe todo el espacio de la columna */
+  position: relative; /* Permite posicionar el icono de forma absoluta dentro */
+  display: flex; /* Para que el input y el icono se alineen */
+  align-items: center; /* Centra verticalmente los elementos internos */
+}
+
+/* Estilos para el input dentro de tu CustomDatePickerInput */
+/* No necesitamos clases específicas de react-datepicker aquí ya que estamos en control del input */
+.custom-datepicker-container input {
+  /* Los estilos de padding y width se manejan inline en el CustomDatePickerInput */
+  /* Asegúrate de que box-sizing: border-box; esté aplicado si no es el default */
+}
+
+/* Estilos para el icono del calendario que hemos añadido manualmente */
+.custom-datepicker-container .calendar-icon {
+  position: absolute; /* Posiciona el icono de forma absoluta respecto a .custom-datepicker-container */
+  right: 12px; /* Distancia desde el borde derecho del input */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para el centrado vertical */
+  cursor: pointer; /* Indica que es clickeable */
+  font-size: 20px; /* Tamaño del icono (ajusta si es un SVG o imagen) */
+  color: var(--color-texto-claro); /* Color del icono */
+  line-height: 1; /* Elimina espacio extra si es un carácter de texto */
+  z-index: 1; /* Asegura que el icono esté por encima del input */
+}
+
+/* Puedes necesitar estilos adicionales para la fecha seleccionada dentro del input si no se ve bien */
+.react-datepicker__input-container input {
+  /* Cualquier estilo que afecte el input de react-datepicker directamente */
+  /* Por ejemplo, si el texto seleccionado no se ve bien con el paddingRight */
+}
