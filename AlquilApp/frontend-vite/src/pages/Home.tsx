@@ -19,12 +19,11 @@ const CustomDatePickerInput = forwardRef<HTMLInputElement, CustomInputProps>(
         onClick={onClick}
         placeholder={placeholder}
         ref={ref}
-        // Pasamos los estilos al input aquí, directamente.
         style={{
           width: '100%',
           padding: '12px',
           borderRadius: '8px',
-          border: '1px solid var(--color-borde)',
+          border: '1px solid var(--color-primario)',
           backgroundColor: 'var(--color-fondo-claro)',
           color: 'var(--color-texto)',
           paddingRight: '40px', // Deja espacio para el icono
@@ -84,9 +83,8 @@ const HomePage: React.FC = () => {
           <h2 style={{ textAlign: "center", fontSize: 28, marginBottom: 24, color: "var(--color-texto)" }}>Reservá tu auto</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
-              {/* *********** CAMBIO CLAVE AQUÍ: Ajuste del estilo del div que contiene label y input/DatePicker *********** */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}> {/* Añadido: display flex y flexDirection column */}
-                <label style={{ color: "var(--color-texto)" }}>Sucursal</label>
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                <label style={{ color: "var(--color-texto)"}}>Sucursal</label>
                 <select style={inputStyle}>
                   <option>Seleccione sucursal</option>
                   <option>Sucursal 1</option>
@@ -94,7 +92,7 @@ const HomePage: React.FC = () => {
                   <option>Sucursal 3</option>
                 </select>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}> {/* Añadido: display flex y flexDirection column */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                 <label style={{ color: "var(--color-texto)" }}>Fecha de retiro</label>
                 <DatePicker
                   selected={fechaRetiro}
@@ -125,6 +123,14 @@ const HomePage: React.FC = () => {
                 <input type="time" style={inputStyleHour} />
               </div>
             </div>
+          </div>
+        </section>
+
+        <section style={{ marginTop: 48 }}>
+          <div style={{ maxWidth: 700, margin: "16px auto", display: "flex", justifyContent: "center" , gap: 16 }}>
+            <button style={{ width: "300px" }}>
+              Buscar
+            </button>
           </div>
         </section>
 
@@ -195,7 +201,7 @@ const inputStyleHour: React.CSSProperties = {
   width: "94.6%",
   padding: 12,
   borderRadius: 8,
-  border: "1px solid var(--color-borde)",
+  border: "1px solid var(--color-primario)",
   background: "var(--color-fondo-claro)",
   color: "var(--color-texto)",
 };
@@ -204,7 +210,7 @@ const inputStyle: React.CSSProperties = {
   width: "100%",
   padding: 12,
   borderRadius: 8,
-  border: "1px solid var(--color-borde)",
+  border: "1px solid var(--color-primario)",
   background: "var(--color-fondo-claro)",
   color: "var(--color-texto)"
 };
